@@ -1,14 +1,15 @@
 
 #STUDENT GRADE CALCULATOR
 
+#calculate total sum
 def calculate_total(marks):
     return sum(marks)
 
-
+#calculate total percentage
 def calculate_percentage(total):
     return total / 5
 
-
+#calculate grade 
 def calculate_grade(percentage):
     if percentage >= 85:
         return "A"
@@ -46,11 +47,13 @@ while True:
     percentage = calculate_percentage(total)
     grade = calculate_grade(percentage)
 
+    #pass or fail?
     if percentage >= 40:
         result = "Pass"
     else:
         result = "Fail"
 
+    #output
     print("------------------------------")
     print("Student Name:", name)
     print("Total Marks:", total)
@@ -59,6 +62,7 @@ while True:
     print("Result:", result)
     print("------------------------------")
 
+    #asking for another student 
     choice = input("Another student? (y/n): ")
 
     if choice == "n":
